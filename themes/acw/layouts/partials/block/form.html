@@ -1,0 +1,84 @@
+<!-- section: Contact -->
+<section id="contact" class="divider parallax layer-overlay" data-stellar-background-ratio="0.5" data-bg-img="http://placehold.it/1920x1277">
+  <div class="container">
+    <div class="row pt-30">
+      <div class="col-md-6 col-md-offset-6">
+
+        <h2 class="text-white mb-20 mt-0">Reservation Form</h2>
+        <form id="booking_form" name="booking_form" class="form-transparent form-text-white" method="post" action="includes/booking.php">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="styled-select">
+                  <select id="booking_category" name="booking_category" class="form-control" required>
+                    <option value="All Events">All Events</option>
+                    <option value="Ceremony">Ceremony</option>
+                    <option value="Reception">Reception</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <input type="text" placeholder="Enter Name" id="booking_name" name="booking_name" required="" class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <input type="text" placeholder="Email" id="booking_email" name="booking_email" class="form-control" required="">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" placeholder="Phone" id="booking_phone" name="booking_phone" class="form-control" required="">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" placeholder="Date" id="booking_date" name="booking_date"  class="form-control date-picker" required="">
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group">
+                <textarea id="form_message" name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="form-group mb-0">
+                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                <button type="submit" class="btn btn-colored btn-theme-colored btn-lg btn-submit" data-loading-text="Please wait...">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Booking Form Validation-->
+        <script type="text/javascript">
+          $("#booking_form").validate({
+            submitHandler: function(form) {
+              var form_btn = $(form).find('button[type="submit"]');
+              var form_result_div = '#form-result';
+              $(form_result_div).remove();
+              form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+              var form_btn_old_msg = form_btn.html();
+              form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+              $(form).ajaxSubmit({
+                dataType:  'json',
+                success: function(data) {
+                  if( data.status == 'true' ) {
+                    $(form).find('.form-control').val('');
+                  }
+                  form_btn.prop('disabled', false).html(form_btn_old_msg);
+                  $(form_result_div).html(data.message).fadeIn('slow');
+                  setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                }
+              });
+            }
+          });
+        </script>
+        <!-- Booking Form Ends -->
+
+      </div>
+    </div>
+  </div>
+</section>
+</div>
