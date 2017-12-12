@@ -1,0 +1,24 @@
+
+        <!-- HERO -->
+        <section id="hero" class="hero-fullscreen parallax hero-video overlay-black">
+            <div class="background-image">
+                <img src="/img/beach.jpg" alt="#">
+            </div>
+            <div class="video-background background-image overlay-black" data-overlay-dark="2">
+                <img src="" alt="#">
+                <div class="video-foreground">
+                    <iframe src="{{ .Params.home_hero_video_id }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="container pl5p pr5p">
+                    <div class="col-md-8 text-center m-auto white">
+                      <h5 class="hero-subheading mb15">{{ .Params.home_hero_leading_heading }}</h5>
+                      <h1 class="h1-md mb20">{{ .Params.home_hero_large_heading }}</h1>
+                      <h5 class="lead h5-md mb20">{{ .Params.home_hero_sub_heading }}</h5>
+                      <a href="{{ .Params.home_hero_button_link }}" class="btn btn-white btn-scroll mt10">{{ .Params.home_hero_button_text }}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -->

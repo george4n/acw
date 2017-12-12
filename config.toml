@@ -1,3 +1,202 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+DefaultContentLanguage = "en"
+baseurl = "https://solstolen.eu"
+copyright = "Everything is mine"
+languageCode = "en"
+theme = "acw"
+title = "Solstolen"
+Paginate = 2
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+[Languages.en]
+copyright = "Copyright EN"
+description = "Solstolen"
+name = "George Neophytou"
+title = "SolStolen EN"
+weight = 1
+[Languages.en.navigation]
+about = "About EN"
+help = "Help"
+home = "Home EN"
+[Languages.en.params]
+linkedin = "english-link"
+[Languages.sv]
+copyright = "Copyright SV"
+title = "SolStolen SV"
+weight = 2
+[Languages.sv.navigation]
+about = "About SV"
+help = "Help SV"
+home = "Home SV"
+[Languages.sv.params]
+linkedin = "lien-francais"
+[[menu.postpend]]
+name = "External link"
+url = "http://gohugo.io"
+weight = 10
+
+[params]
+custom_css = []
+custom_js = []
+description = "Solstolen"
+disablefonts = false
+favicon = "img/assets/favicon.png"
+name = "George Neophytou"
+
+[params.about]
+enable = true
+endpoint = "Be part<br>of our<br>story!"
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+title = "About"
+
+[[params.about.events]]
+date = "2009-2011"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+img = "1.jpg"
+title = "Our Humble Beginnings"
+
+[[params.about.events]]
+date = "March 2011"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+img = "2.jpg"
+title = "An Agency is Born"
+
+[[params.about.events]]
+date = "December 2012"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+img = "3.jpg"
+title = "Our Humble Beginnings"
+
+[[params.about.events]]
+date = "July 2014"
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+img = "4.jpg"
+title = "Phase Two Expansion"
+
+[params.clients_list]
+enable = true
+
+[params.contact]
+buttontext = "Send message"
+email = "your@email.com"
+enable = true
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+title = "Contact us"
+
+[params.contact.form.email]
+text = "Your Email *"
+warning = "Please enter your email address."
+
+[params.contact.form.message]
+text = "Your Message *"
+warning = "Please enter a message."
+
+[params.contact.form.name]
+text = "Your Name *"
+warning = "Please enter your name."
+
+[params.contact.form.phone]
+text = "Your Phone *"
+warning = "Please enter your phone number."
+
+[params.error404]
+about = "About"
+brand = "Sol Stolen"
+contact = "Contact"
+heading = "Page couldn't be found"
+portfolio = "Portfolio"
+services = "Services"
+team = "Team"
+text = "Please visit [this page](/)"
+
+[params.footer]
+copyright = "Published under the Apache License 2.0."
+enable = true
+
+[[params.footer.quicklinks]]
+link = "#"
+text = "Privacy Policy"
+
+[[params.footer.quicklinks]]
+link = "#"
+text = "Terms of Use"
+
+[[params.footer.social]]
+icon = "fa-twitter"
+link = "#"
+
+[[params.footer.social]]
+icon = "fa-facebook"
+link = "#"
+[[params.footer.social]]
+icon = "fa-linkedin"
+link = "#"
+[params.hero]
+buttontext = "Tell me more"
+subtitle = "It's nice to meet you"
+title = "Welcome To Our Studio!"
+[params.portfolio]
+enable = false
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+title = "Portfolio"
+[params.portfolio.modal]
+buttontext = "Close project"
+category = "Category"
+client = "Client"
+date = "Date"
+[params.services]
+enable = true
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+title = "Services"
+[[params.services.row]]
+[[params.services.row.list]]
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+icon = "fa-shopping-cart"
+title = "E-Commerce"
+url = "#"
+[[params.services.row.list]]
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+icon = "fa-laptop"
+title = "Responsive Design"
+url = "#"
+[[params.services.row.list]]
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+icon = "fa-lock"
+title = "Web"
+url = "#"
+[params.team]
+description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
+enable = true
+subtitle = "Lorem ipsum dolor sit amet consectetur."
+title = "Our amazing team"
+[[params.team.members]]
+bio = "Kay is an awesome Lead Designer with heaps of experience in the field of UX.\nShe worked at Pied Piper for years until they went belly up."
+img = "1.jpg"
+livesIn = "[Munich, Germany](#some-maps-url)"
+name = "Kay Garland"
+position = "Lead Designer"
+reportsTo = "CTO"
+scope = ["UX for [member dashboard](#)", "Maintainer for [awesome-project](#)", "Open Source [community management](#)"]
+social = [["fa-twitter", "#"], ["fa-facebook", "#"], ["fa-linkedin", "#"]]
+[[params.team.members]]
+img = "2.jpg"
+name = "Larry Parker"
+position = "Lead Marketer"
+social = [["fa-twitter", "#"], ["fa-facebook", "#"], ["fa-linkedin", "#"]]
+[[params.team.members]]
+img = "3.jpg"
+name = "Diana Pertersen"
+position = "Lead Developer"
+social = [["fa-twitter", "#"], ["fa-facebook", "#"], ["fa-linkedin", "#"]]
+[[params.clients]]
+link = "#"
+logo = "envato.jpg"
+[[params.clients]]
+link = "#"
+logo = "designmodo.jpg"
+[[params.clients]]
+link = "#"
+logo = "themeforest.jpg"
+[[params.clients]]
+link = "#"
+logo = "creative-market.jpg"
