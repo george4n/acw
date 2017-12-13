@@ -1,74 +1,46 @@
 <!-- Section: Blog  -->
 <section id="blog">
   <div class="container">
-      <!-- Section Title -->
-      <div class="section-title wow fadeInDown"  data-wow-delay=".1s" data-wow-duration=".8s">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center pb-30">
-              <h2>Blog</h2>
-              <img src="images/section-title-after.png" alt="">
-              <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, dignissimos nihil unde dolores qui, adipisci assumenda atque blanditiis omnis nostrum!</em></p>
-            </div>
-          </div>
-      </div>
-      <!-- Section Content -->
-      <div class="section-content">
-        <div class="cd-container cd-timeline">
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-img"> <i class="fa fa-heart"></i> </div>
-            <!-- cd-timeline-img -->
-            <div class="cd-timeline-content no-border bg-lighter">
-              <div class="photo-timeline date-img text-right">
-                <h4><a href="single-post-onepage-nav-light.html">Our First Date</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tempor incididunt ut labore et dolore magna et sed aliqua. Ut enim ad minim veniam.</p>
-                <a class="text-theme-colored" role="button" href="single-post-onepage-nav-light.html">Read More</a> </div>
-              <div class="discription style2">
-                <h5>Jan 14</h5>
-              </div>
-            </div>
-            <!-- cd-timeline-content -->
-          </div>
-          <!-- cd-timeline-block -->
-
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-img"> <i class="fa fa-heart"></i> </div>
-            <!-- cd-timeline-img -->
-            <div class="cd-timeline-content no-border bg-lighter">
-              <div class="photo-timeline date-img text-left">
-                <h4><a href="single-post-onepage-nav-light.html">Our Honeymoon planning</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tempor incididunt ut labore et dolore magna et sed aliqua. Ut enim ad minim veniam.</p>
-                <a class="text-theme-colored" role="button" href="single-post-onepage-nav-light.html">Read More</a> </div>
-              <div class="discription style2">
-                <h5>Apl 14</h5>
-              </div>
-            </div>
-            <!-- cd-timeline-content -->
-          </div>
-          <!-- cd-timeline-block -->
-
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-img"> <i class="fa fa-heart"></i> </div>
-            <!-- cd-timeline-img -->
-            <div class="cd-timeline-content no-border bg-lighter">
-              <div class="photo-timeline date-img text-right">
-                <h4><a href="single-post-onepage-nav-light.html">Our Photogrape</a></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tempor incididunt ut labore et dolore magna et sed aliqua. Ut enim ad minim veniam.</p>
-                <a class="text-theme-colored" role="button" href="single-post-onepage-nav-light.html">Read More</a> </div>
-              <div class="discription style2">
-                <h5>Mar 14</h5>
-              </div>
-            </div>
-            <!-- cd-timeline-content -->
-          </div>
-          <!-- cd-timeline-block -->
-
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-img"> <i class="fa fa-heart"></i> </div>
-            <!-- cd-timeline-img -->
-            <!-- cd-timeline-block -->
-            <!-- cd-timeline -->
-          </div>
+    <!-- Section Title -->
+    <div class="section-title wow fadeInDown" data-wow-delay=".1s" data-wow-duration=".8s">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center pb-30">
+          <h2>Blog</h2>
+          <img src="images/section-title-after.png" alt="">
+          <p><em>Here are some of my recent blog posts. </em></p>
         </div>
       </div>
+    </div>
+    <!-- Section Content -->
+    <div class="section-content">
+      <div class="cd-container cd-timeline">
+
+        {{ range where .Site.RegularPages "Section" "blog" }}
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img"> <i class="fa fa-heart"></i> </div>
+          <!-- cd-timeline-img -->
+          <div class="cd-timeline-content no-border bg-lighter">
+            <div class="photo-timeline date-img text-left">
+              <h4><a href="single-post-onepage-nav-light.html">{{.Title}}</a></h4>
+              <p>{{slicestr .Summary 0 200}}...</p>
+              <a class="text-theme-colored" role="button" href="single-post-onepage-nav-light.html">Read More - {{ .FuzzyWordCount }} Words</a> </div>
+            <div class="discription style2">
+              <h6>{{.Date.Format "2006-01-02"}}</h6>
+            </div>
+          </div>
+          <!-- cd-timeline-content -->
+        </div>
+        <!-- cd-timeline-block -->
+        {{ end }}
+
+
+        <div class="cd-timeline-block">
+          <div class="cd-timeline-img"> <i class="fa fa-heart"></i> </div>
+          <!-- cd-timeline-img -->
+          <!-- cd-timeline-block -->
+          <!-- cd-timeline -->
+        </div>
+      </div>
+    </div>
   </div>
 </section>

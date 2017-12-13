@@ -8,32 +8,7 @@ Paginate = 2
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 
-[Languages.en]
-copyright = "Copyright EN"
-description = "Solstolen"
-name = "George Neophytou"
-title = "SolStolen EN"
-weight = 1
-[Languages.en.navigation]
-about = "About EN"
-help = "Help"
-home = "Home EN"
-[Languages.en.params]
-linkedin = "english-link"
-[Languages.sv]
-copyright = "Copyright SV"
-title = "SolStolen SV"
-weight = 2
-[Languages.sv.navigation]
-about = "About SV"
-help = "Help SV"
-home = "Home SV"
-[Languages.sv.params]
-linkedin = "lien-francais"
-[[menu.postpend]]
-name = "External link"
-url = "http://gohugo.io"
-weight = 10
+
 
 [params]
 custom_css = []
