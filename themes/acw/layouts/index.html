@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-  {{ partial "head.html" . }}
+{{ partial "head.html" . }}
 
 
 <body class="has-side-panel side-panel-right fullwidth-page side-push-panel">
@@ -125,44 +123,26 @@
         </div>
       </div>
     </div>
-    <div class="header-nav">
-      <div class="header-nav-wrapper navbar-scrolltofixed bg-light">
-        <div class="container">
-          {{ partial "block/nav/nav.html" . }}
-        </div>
-      </div>
-    </div>
-  </header>
 
+{{ partial "block/nav/nav.html" . }}
+  </header>
 {{ partial "block/form/modal/booking.html" . }}
 
   <!-- Start main-content -->
-  <div class="main-content">
-    {{ partial "block/hero/hero.html" . }}
-    {{ partial "block/service/service.html" . }}
-
-    {{ partial "block/about/about.html" . }}
-
-    {{ partial "block/checklist.html" . }}
-    {{ partial "block/events.html" . }}
-
-    {{partial "block/gallery.html" . }}
-
-    {{partial "block/calltoaction.html" . }}
-
-    {{partial "block/blog.html" . }}
-    {{partial "block/partners.html" . }}
-    {{partial "block/form.html" . }}
-    {{partial "block/footer.html" . }}
-
-
-
-
-
-  <!-- end main-content -->
-
-
-  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+<div class="main-content">
+{{ partial "block/hero/hero.html" . }}
+{{ partial "block/service/service.html" . }}
+{{ partial "block/about/about.html" . }}
+{{ partial "block/checklist.html" . }}
+{{ partial "block/events.html" . }}
+{{ partial "block/gallery.html" . }}
+{{ partial "block/calltoaction.html" . }}
+{{ partial "block/blog.html" . }}
+{{ partial "block/partners.html" . }}
+{{ partial "block/form.html" . }}
+{{ partial "block/footer.html" . }}
+<!-- end main-content -->
+{{partial "block/scrolltop.html" . }}
 </div>
 <!-- end wrapper -->
 
