@@ -3,7 +3,7 @@
 <body class="fullwidth-page">
   <div class="body-overlay"></div>
   <div id="wrapper" class="clearfix">
-    {{ partial "block/preloader.html" . }}
+    
     <!-- Header -->
     <header id="header" class="header">
       <div class="header-top bg-theme-colored sm-text-center">
@@ -79,8 +79,9 @@
     <!-- Start main-content -->
     <div class="main-content">
       {{ partial "block/hero/hero.html" . }}
-      {{ partial "block/service/service.html" . }}
       {{ partial "block/about/about.html" . }}
+      {{ partial "block/service/service.html" . }}
+
       {{ partial "block/checklist.html" . }}
       {{ partial "block/events.html" . }}
       {{ partial "block/gallery.html" . }}
