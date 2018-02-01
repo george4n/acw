@@ -28,11 +28,12 @@
   <link href="{{ "css/responsive.css" | absURL }}" rel="stylesheet" type="text/css">
   {{ range .Site.Params.custom_css }}
   <link rel="stylesheet" href="{{ . | relURL }}"> {{ end }}
-  <script src="{{ "js/jquery-2.2.0.min.js" | absURL }}"></script>
-  <script src="{{ "js/jquery-ui.min.js" | absURL }}"></script>
-  <script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
+  <script src="{{ "js/jquery-2.2.0.min.js" | relURL }}"></script>
+  <script src="{{ "js/jquery-ui.min.js" | relURL }}"></script>
+  <script src="{{ "js/bootstrap.min.js" | relURL }}"></script>
+  <script src="{{ "js/google-map-init.js" | relURL }}"></script>
   <!-- JS | jquery plugin collection for this theme -->
-  <script src="{{ "js/jquery-plugin-collection.js" | absURL }}"></script>
+  <script src="{{ "js/jquery-plugin-collection.js" | relURL }}"></script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
