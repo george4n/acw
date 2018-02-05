@@ -3,7 +3,7 @@
 <body class="fullwidth-page">
   <div class="body-overlay"></div>
   <div id="wrapper" class="clearfix">
-
+{{ partial "preloader.html" . }}
     <!-- Header -->
     <header id="header" class="header">
       <div class="header-top bg-theme-colored sm-text-center">
@@ -97,8 +97,4 @@
 
     <!-- Footer Scripts -->
     <!-- JS | Custom script for all pages -->
-    <script src="js/custom.js"></script>
-
-</body>
-
-</html>
+    {{partial "foot.html" . }}

@@ -2,7 +2,7 @@
 <body class="">
 <div id="wrapper" class="clearfix">
 
-
+{{ partial "preloader.html" . }}
   <!-- Header -->
   <header id="header" class="header">
   {{ partial "block/nav/nav-pages.html" . }}
@@ -261,7 +261,4 @@
 
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
-<script src="js/custom.js"></script>
-
-</body>
-</html>
+  {{partial "foot.html" . }}
