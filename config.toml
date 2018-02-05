@@ -1,9 +1,9 @@
 DefaultContentLanguage = "en"
-baseurl = "https://solstolen.eu"
+baseurl = "https://amazingcyprusweddings.com/new/"
 copyright = "Everything is mine"
 languageCode = "en"
 theme = "acw"
-title = "Solstolen"
+title = "Amazing Weddings"
 Paginate = 2
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
@@ -13,7 +13,7 @@ googleAnalytics = ""
 [params]
 custom_css = []
 custom_js = []
-description = "Solstolen"
+description = "Amazing Weddings"
 disablefonts = false
 favicon = "img/assets/favicon.png"
 name = "George Neophytou"
