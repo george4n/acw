@@ -10,19 +10,29 @@
   <!-- Start main-content -->
   <div class="main-content">
     <!-- Section: inner-header -->
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="http://placehold.it/1920x1284">
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
       <div class="container pt-120 pb-50">
         <!-- Section Content -->
         <div class="section-content pt-100">
           <div class="row">
             <div class="col-md-12">
-              <h3 class="title text-white">Contact</h3>
+              <h3 class="title text-white">{{ .Title }}</h3>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    <section>
+      <div class="container">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-12">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Divider: Contact -->
     <section class="divider layer-overlay overlay-white-9" data-bg-img="http://placehold.it/1920x1277">
       <div class="container">

@@ -2,7 +2,7 @@
 <body class="">
 <div id="wrapper" class="clearfix">
 
-
+{{ partial "preloader.html" . }}
   <!-- Header -->
   <header id="header" class="header">
   {{ partial "block/nav/nav-pages.html" . }}
@@ -10,13 +10,13 @@
   <!-- Start main-content -->
   <div class="main-content">
     <!-- Section: inner-header -->
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="http://placehold.it/1920x1284">
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
       <div class="container pt-120 pb-50">
         <!-- Section Content -->
         <div class="section-content pt-100">
           <div class="row">
             <div class="col-md-12">
-              <h3 class="title text-white">Contact</h3>
+              <h3 class="title text-white">{{ .Title }}</h3>
             </div>
           </div>
         </div>
