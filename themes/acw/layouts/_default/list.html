@@ -1,0 +1,218 @@
+{{ partial "head.html" . }}
+<body class="">
+<div id="wrapper" class="clearfix">
+
+
+  <!-- Header -->
+  <header id="header" class="header">
+  {{ partial "block/nav/nav-pages.html" . }}
+  </header>
+  <!-- Start main-content -->
+  <div class="main-content">
+    <!-- Section: inner-header -->
+    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
+      <div class="container pt-120 pb-50">
+        <!-- Section Content -->
+        <div class="section-content pt-100">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="title text-white">Blogs</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section: Blog -->
+        <section>
+          <div class="container mt-30 mb-30 pt-30 pb-30">
+            <div class="row">
+
+              {{ range where .Paginator.Pages "Section" "blog" }}
+              <div class="col-sm-6 col-md-4 col-lg-4">
+                <article class="post clearfix maxwidth600 mb-30">
+                  <div class="entry-header">
+                    <div class="post-thumb thumb"> <img src="http://placehold.it/900x500" alt="" class="img-responsive img-fullwidth"> </div>
+                  </div>
+                  <div class="entry-content border-1px p-20">
+                    <h5 class="entry-title mt-0 pt-0"><a href="#">{{ .Title }}</a></h5>
+                    <div class="entry-meta">
+                      <ul class="list-inline entry-date font-12 mt-5">
+                        <li><span class="text-theme-colored">{{.Date.Format "2006-01-02"}} - {{ .FuzzyWordCount }} Words | by Mandy</span></li>
+                        <li><a class="text-theme-colored" href="#"></a></li>
+                      </ul>
+                    </div>
+                    <p class="text-left mb-20 mt-15 font-13">{{slicestr .Summary 0 200}}...</p>
+                    <a class="btn btn-dark btn-theme-colored btn-sm btn-flat pull-left mt-0" href="#">Read more</a>
+                    <div class="clearfix"></div>
+                  </div>
+                </article>
+              </div>
+              {{ end }}
+
+
+
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <nav>
+                  <ul class="pagination theme-colored xs-pull-center m-0">
+                    <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a> </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">...</a></li>
+                    <li> <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a> </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- end main-content -->
+
+
+    <!-- Section: About -->
+
+<!--
+          <div class="col-xs-12 col-sm-5 col-md-4">
+            <div class="best-people">
+              <div class="thumb">
+                <img src="/new/img/about-mandy.jpg" alt="">
+                <div class="best-people-details"><a class="font-Playfair" href="page-about-her.html">Know more</a></div>
+              </div>
+              <div class="info">
+                <h2 class="name">Jenny</h2>
+                <img src="images/about-title-bg.png" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tempor incididunt ut labore et dolore magna et sed aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
+                <a class="font-great-vibes text-theme-colored font-weight-700 font-23" href="">Read more</a>
+                <ul class="social-icons icon-dark icon-theme-colored icon-sm">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+-->
+    <!-- divider: Emergency Services -->
+    <section>
+      <div class="container">
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-12">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Divider: Divider -->
+
+    <!--  service content  -->
+
+
+  <!-- end main-content -->
+
+  <!-- Footer -->
+  <footer id="footer" class="footer pb-0 bg-black-111">
+    <div class="container pb-20">
+      <div class="row multi-row-clearfix">
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <a class="text-white font-great-vibes font-32" href="#">Perfect &nbsp;<i class="fa fa-heart font-25"></i> Wedding</a>
+            <p class="mt-20 mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas possimus aut distinctio autem nisi, eaque, quis reprehenderit perspiciatis molestiae iste minus modi sint maiores earum..</p>
+            <ul class="social-icons icon-dark icon-circled">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Pages</h5>
+            <ul class="list-border list theme-colored angle-double-right">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Donor Privacy Policy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Copyright Notice</a></li>
+              <li><a href="#">Media Center</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Quick Links</h5>
+            <ul class="list-border list theme-colored angle-double-right">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Donor Privacy Policy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Copyright Notice</a></li>
+              <li><a href="#">Media Center</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="widget dark">
+            <h5 class="widget-title line-bottom">Quick Contact</h5>
+            <ul class="list list-border">
+              <li><a href="#">+(012) 345 6789</a></li>
+              <li><a href="#">hello@yourdomain.com</a></li>
+              <li><a href="#" class="lineheight-20">121 King Street, Melbourne Victoria 3000, Australia</a></li>
+            </ul>
+            <p class="text-white mb-5 mt-15">Subscribe to our newsletter</p>
+            <form id="footer-mailchimp-subscription-form" class="newsletter-form mt-10">
+              <label class="display-block" for="mce-EMAIL"></label>
+              <div class="input-group">
+                <input type="email" value="" name="EMAIL" placeholder="Your Email"  class="form-control" data-height="37px" id="mce-EMAIL">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-colored btn-theme-colored m-0"><i class="fa fa-paper-plane-o text-white"></i></button>
+                </span>
+              </div>
+            </form>
+            <!-- Mailchimp Subscription Form Validation-->
+            <script type="text/javascript">
+              $('#footer-mailchimp-subscription-form').ajaxChimp({
+                  callback: mailChimpCallBack,
+                  url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
+              });
+
+              function mailChimpCallBack(resp) {
+                  // Hide any previous response text
+                  var $mailchimpform = $('#footer-mailchimp-subscription-form'),
+                      $response = '';
+                  $mailchimpform.children(".alert").remove();
+                  console.log(resp);
+                  if (resp.result === 'success') {
+                      $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                  } else if (resp.result === 'error') {
+                      $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                  }
+                  $mailchimpform.prepend($response);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-nav bg-black-222 p-20">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p class="text-white font-11 m-0">Copyright &copy;2015 ThemeMascot. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- end wrapper -->
+
+  {{partial "foot.html" . }}

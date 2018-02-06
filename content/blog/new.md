@@ -1,7 +1,9 @@
 ---
-title: Hello World 4
-date: 2017-11-16 18:15:44 +0200
+title: "New"
+date: 2018-02-06T17:26:23+02:00
+draft: false
 categories: General
-
 ---
+
+
 In an ideal world this website wouldn’t exist, a client would acknowledge the importance of having web copy before the design starts. Needless to say it’s very important, content is king and people are beginning to understand that. However, back over in reality some project schedules and budgets don’t allow for web copy to be written before the design phase, this is sad but true. We’re here to help, we’ve written examples of web copy for over 40 industries for you to use at concept phase of your projects to bring a little life and realism to your designs and help you think about who and what you are designing for. We want clients and designers alike to think about their design and how it will work with the web copy, we want you think about how numbers, symbols and bullet points will look.
