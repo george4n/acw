@@ -43,7 +43,9 @@
                         <li><a class="text-theme-colored" href="#"></a></li>
                       </ul>
                     </div>
+                    {{ if gt (len .Summary) 200 }}
                     <p class="text-left mb-20 mt-15 font-13">{{slicestr .Summary 0 200}}...</p>
+                    {{ end }}
                     <a class="btn btn-dark btn-theme-colored btn-sm btn-flat pull-left mt-0" href="{{ .Permalink }}">Read more</a>
                     <div class="clearfix"></div>
                   </div>
