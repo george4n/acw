@@ -23,3 +23,7 @@ fields:
   name: tags
   label: Tags
   description: enter tags here
+- type: image_gallery
+  label: Featured Image
+  name: featured_image
+  description: Minimum 1280x720
