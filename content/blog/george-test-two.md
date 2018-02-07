@@ -1,7 +1,7 @@
 +++
 author = "Mandy"
 date = "2018-02-07T21:46:32+00:00"
-featured_image = []
+featured_image = "/uploads/2018/02/07/calltoaction.jpg"
 tags = []
 title = "George Test Two"
 
