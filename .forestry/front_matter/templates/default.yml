@@ -19,3 +19,7 @@ fields:
   type: boolean
   hidden: false
   default: true
+- type: tag_list
+  name: tags
+  label: Tags
+  description: enter tags here
