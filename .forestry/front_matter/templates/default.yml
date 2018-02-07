@@ -1,5 +1,6 @@
 ---
 pages:
+- blog/george-test-one.md
 - blog/test-1.md
 hide_body: false
 fields:
