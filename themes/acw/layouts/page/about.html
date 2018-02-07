@@ -1,13 +1,4 @@
-{{ partial "head.html" . }}
-<body class="">
-<div id="wrapper" class="clearfix">
-
-
-  <!-- Header -->
-  <header id="header" class="header">
-  {{ partial "block/nav/nav-pages.html" . }}
-  </header>
-  <!-- Start main-content -->
+{{ partial "components/top.html" . }}
   <div class="main-content">
     <!-- Section: inner-header -->
     <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
@@ -146,6 +137,4 @@
 
 </div>
 <!-- end wrapper -->
-{{ partial "block/footer.html" . }}
-{{ partial "block/scrolltop.html" . }}
-{{ partial "foot.html" . }}
+{{ partial "components/bottom.html" . }}

@@ -1,100 +1,11 @@
-{{ partial "head.html" . }}
-
-<body class="fullwidth-page">
-  <div class="body-overlay"></div>
-  <div id="wrapper" class="clearfix">
-{{ partial "preloader.html" . }}
-    <!-- Header -->
-    <header id="header" class="header">
-      <div class="header-top bg-theme-colored sm-text-center">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="widget no-border m-0">
-                <ul class="social-icons icon-dark icon-circled icon-theme-colored icon-sm sm-text-center mt-sm-15">
-                  <li><a href="#"><i class="fa fa-facebook text-white"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter text-white"></i></a></li>
-                  <li><a href="#"><i class="fa fa-google-plus text-white"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram text-white"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin text-white"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="widget no-border m-0">
-                <ul class="list-inline pull-right flip sm-pull-none sm-text-center mt-5">
-                  <li>
-                    <a href="#" class="text-white">..</a>
-                  </li>
-                  <li class="text-white">|</li>
-                  <li>
-                    <a href="#" class="text-white">..</a>
-                  </li>
-                  <li class="text-white">|</li>
-                  <li>
-                    <a href="#" class="text-white">..</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header-middle p-0 bg-lightest xs-text-center">
-        <div class="container pt-0 pb-0">
-          <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-5">
-              <div class="widget no-border m-0">
-                <a class="menuzord-brand pull-left flip pull-left flip xs-pull-center mb-15 font-great-vibes text-theme-colored font-32" href="javascript:void(0)">Amazing &nbsp;<i class="fa fa-heart font-25"></i> Weddings</a>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-4">
-              <div class="widget no-border pull-right sm-pull-none sm-text-center mt-10 mb-10 m-0">
-                <ul class="list-inline">
-                  <li><i class="icon_mobile text-theme-colored font-32 mt-5 sm-display-block"></i></li>
-                  <li>
-                    <a href="#" class="font-12 text-gray text-uppercase">Call us today!</a>
-                    <h5 class="font-14 m-0"> +(357) 99 120 447</h5>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-md-3">
-              <div class="widget no-border pull-right sm-pull-none sm-text-center mt-10 mb-10 m-0">
-                <ul class="list-inline">
-                  <li><i class="fa fa-clock-o text-theme-colored font-36 mt-5 sm-display-block"></i></li>
-                  <li>
-                    <a href="#" class="font-12 text-gray text-uppercase">We are open!</a>
-                    <h5 class="font-13 text-black m-0"> Mon-Fri 8:00-18:00</h5>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{ partial "block/nav/nav.html" . }}
-      {{ partial "block/form/modal/booking.html" . }}
-    </header>
-    <!-- Start main-content -->
-    <div class="main-content">
-      {{ partial "block/hero/hero.html" . }}
-      {{ partial "block/about/about.html" . }}
-      {{ partial "block/service/service.html" . }}
-
-      {{ partial "block/checklist.html" . }}
-      {{ partial "block/events.html" . }}
-      {{ partial "block/gallery.html" . }}
-
-
-
-      {{ partial "block/form.html" . }}
-      {{ partial "block/footer.html" . }}
-      {{partial "block/scrolltop.html" . }}
-    </div>
-    <!-- end main-content -->
-    <!-- end wrapper -->
-
-    <!-- Footer Scripts -->
-    <!-- JS | Custom script for all pages -->
-    {{partial "foot.html" . }}
+{{ partial "components/top-home.html" . }}
+<!-- Start main-content -->
+<div class="main-content">
+  {{ partial "block/home-hero.html" . }}
+  {{ partial "block/home-welcome.html" . }}
+  {{ partial "block/home-service.html" . }}
+  {{ partial "block/home-checklist.html" . }}
+  {{ partial "components/blog-home.html" . }}
+  <!-- Gallery-->
+</div>
+{{ partial "components/bottom.html" . }}

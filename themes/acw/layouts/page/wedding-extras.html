@@ -1,56 +1,32 @@
-{{ partial "head.html" . }}
-<body class="">
-<div id="wrapper" class="clearfix">
-
-{{ partial "preloader.html" . }}
-  <!-- Header -->
-  <header id="header" class="header">
-  {{ partial "block/nav/nav-pages.html" . }}
-  </header>
-  <!-- Start main-content -->
-  <div class="main-content">
-    <!-- Section: inner-header -->
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
-      <div class="container pt-120 pb-50">
-        <!-- Section Content -->
-        <div class="section-content pt-100">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="title text-white">{{ .Title }}</h3>
-            </div>
+{{ partial "components/top.html" . }}
+<div class="main-content">
+  <!-- Section: inner-header -->
+  <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
+    <div class="container pt-120 pb-50">
+      <!-- Section Content -->
+      <div class="section-content pt-100">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title text-white">{{ .Title }}</h3>
           </div>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-12">
-              {{ .Content }}
-            </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="section-content">
+        <div class="row">
+          <div class="col-md-12">
+            {{ .Content }}
           </div>
         </div>
       </div>
-    </section>
-
-
-
-
-
-  </div>
-  <!-- end main-content -->
-
-  <!-- Footer -->
-
+    </div>
+  </section>
+</div>
+<!-- end main-content -->
+<!-- Footer -->
 </div>
 <!-- end wrapper -->
-<div class="call-to-action pt-60 pb-90 text-center">
-<h3>Do you like what you see?</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<a class="btn btn-default btn-lg mr-10" href="#">View Packages</a>
-<a class="btn btn-gray btn-theme-colored btn-lg" href="#">Contact Us</a>
-</div>
-{{ partial "block/footer.html" . }}
-{{ partial "block/scrolltop.html" . }}
-{{ partial "foot.html" . }}
+{{ partial "components/bottom.html" . }}
