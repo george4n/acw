@@ -30,15 +30,13 @@
                     </div>
                     <div class="entry-meta">
                       <ul class="list-inline">
-                        <li>Posted: <span class="text-theme-colored">26 Oct 2015</span></li>
-                        <li>By: <span class="text-theme-colored">Admin</span></li>
+                        <li>Posted: <span class="text-theme-colored">{{.Date.Format "2006-01-02"}}</span></li>
+                        <li>By: <span class="text-theme-colored">{{ .Params.author }}</span></li>
                       </ul>
                     </div>
                     <div class="entry-content mt-10">
                       <p class="mb-15">{{ .Content}}</p>
-                      <div class="entry-header">
-                        <div class="post-thumb thumb"> <img src="http://placehold.it/730x400" alt="" class="img-responsive img-fullwidth"> </div>
-                      </div>
+
                       <div class="mt-30 mb-0">
                         <h5 class="pull-left mt-10 mr-20 text-theme-colored">Share:</h5>
                         <ul class="social-icons icon-circled m-0">

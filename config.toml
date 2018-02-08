@@ -4,11 +4,11 @@ copyright = "Everything is mine"
 languageCode = "en"
 theme = "acw"
 title = "Amazing Weddings"
-Paginate = 6
+Paginate = 20
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
 
-
+metaDataFormat = "toml"
 
 [params]
 custom_css = []
