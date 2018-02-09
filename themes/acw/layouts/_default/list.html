@@ -1,124 +1,60 @@
 {{ partial "components/top.html" . }}
-  <div class="main-content">
-    <!-- Section: inner-header -->
-    <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
-      <div class="container pt-120 pb-50">
-        <!-- Section Content -->
-        <div class="section-content pt-100">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="title text-white">Blogs</h3>
-            </div>
+<div class="main-content">
+  <!-- Section: inner-header -->
+  <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img={{ "/img/header-about.jpg" | relURL }}>
+    <div class="container pt-120 pb-50">
+      <!-- Section Content -->
+      <div class="section-content pt-100">
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="title text-white">Blogs</h3>
           </div>
         </div>
       </div>
-    </section>
-
-
-
-
-
-
-
-    <!-- Section: Blog -->
-        <section>
-          <div class="container mt-30 mb-30 pt-30 pb-30">
-            <div class="row">
-
+    </div>
+  </section>
+  <!-- Section: Blog -->
+  <section>
+    <div class="container mt-30 mb-30 pt-30 pb-30">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="blog-posts">
+            <div class="col-md-12">
               {{ range where .Paginator.Pages "Section" "blog" }}
-              <div class="col-sm-6 col-md-4 col-lg-4">
-                <article class="post clearfix maxwidth600 mb-30">
+              <div class="row list-dashed">
+                <article class="post clearfix mb-50 pb-30">
                   <div class="entry-header">
                     <div class="post-thumb thumb"><a href="{{ .Permalink }}">
-                      <img src="{{ .Params.featured_image }}" alt="" class="img-responsive img-fullwidth"></a> </div>
-                  </div>
-                  <div class="entry-content border-1px p-20">
-                    <h5 class="entry-title mt-0 pt-0"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
-                    <div class="entry-meta">
-                      <ul class="list-inline entry-date font-12 mt-5">
-                        <li><span class="text-theme-colored">{{.Date.Format "2006-01-02"}} - {{ .FuzzyWordCount }} Words | by {{ .Params.author }}</span></li>
-                        <li><a class="text-theme-colored" href="#"></a></li>
-                      </ul>
+                    <img src="{{ .Params.featured_image }}" alt="" class="img-responsive img-fullwidth"></a>
                     </div>
+                    <h5 class="entry-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+                    <ul class="list-inline font-12 mb-20 mt-10">
+                      <li>posted by <a href="#" class="text-theme-colored">{{ .Params.author }} - {{.Date.Format "2006-01-02"}} - {{ .FuzzyWordCount }} Words</a></li>
+                    </ul>
+                  </div>
+                  <div class="entry-content">
                     {{ if gt (len .Summary) 200 }}
-                    <p class="text-left mb-20 mt-15 font-13">{{slicestr .Summary 0 200}}...</p>
+                    <p class="mb-30">{{slicestr .Summary 0 200 | markdownify }}<a href="{{ .Permalink }}">[...]</a></p>
                     {{ end }}
-                    <a class="btn btn-dark btn-theme-colored btn-sm btn-flat pull-left mt-0" href="{{ .Permalink }}">Read more</a>
-                    <div class="clearfix"></div>
+                    <a class="pull-right text-gray font-13" href="{{ .Permalink }}"><i class="fa fa-angle-double-right text-theme-colored"></i> Read more</a>
                   </div>
                 </article>
               </div>
               {{ end }}
-
-
-
             </div>
             <div class="row">
               <div class="col-sm-12">
-                <nav>
-                  <ul class="pagination theme-colored xs-pull-center m-0">
-                    <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a> </li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">...</a></li>
-                    <li> <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a> </li>
-                  </ul>
-                </nav>
+                {{ template "_internal/pagination.html" . }}
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- end main-content -->
-
-
-    <!-- Section: About -->
-
-<!--
-          <div class="col-xs-12 col-sm-5 col-md-4">
-            <div class="best-people">
-              <div class="thumb">
-                <img src="/new/img/about-mandy.jpg" alt="">
-                <div class="best-people-details"><a class="font-Playfair" href="page-about-her.html">Know more</a></div>
-              </div>
-              <div class="info">
-                <h2 class="name">Jenny</h2>
-                <img src="images/about-title-bg.png" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tempor incididunt ut labore et dolore magna et sed aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat.</p>
-                <a class="font-great-vibes text-theme-colored font-weight-700 font-23" href="">Read more</a>
-                <ul class="social-icons icon-dark icon-theme-colored icon-sm">
-                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
--->
-    <!-- divider: Emergency Services -->
-    <section>
-      <div class="container">
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-12">
-              {{ .Content }}
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Divider: Divider -->
-
-    <!--  service content  -->
-
-
-  <!-- end main-content -->
-
-  <!-- Footer -->
+    </div>
+  </section>
 </div>
+<!-- end main-content -->
+<!-- Footer -->
+
 <!-- end wrapper -->
 {{ partial "components/bottom.html" . }}
