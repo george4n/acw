@@ -15,7 +15,7 @@
     <div class="section-content">
       <div class="cd-container cd-timeline">
 
-        {{ range where .Site.RegularPages "Section" "blog" }}
+        {{ range where .Paginate.Site.RegularPages "Section" "blog" }}
         <div class="cd-timeline-block">
           <div class="cd-timeline-img"> <i class="fa fa-heart"></i> </div>
           <!-- cd-timeline-img -->
