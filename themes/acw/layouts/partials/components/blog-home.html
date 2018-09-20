@@ -10,7 +10,7 @@
     </div>
     <div class="row">
       
-      {{ range first 3 .Site.Pages }}
+      {{ range where .Paginator.Pages "Section" "blog" }}
       <div class="col-sm-6 col-md-4 col-lg-4">
         <article class="post clearfix maxwidth600 mb-30">
           <div class="entry-header">

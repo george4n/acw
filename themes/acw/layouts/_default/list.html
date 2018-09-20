@@ -34,7 +34,7 @@
                   </div>
                   <div class="entry-content">
                     {{ if gt (len .Summary) 50 }}
-                    <p class="mb-30">{{slicestr .Summary 0 150 | markdownify }}<a href="{{ .Permalink }}">[...]</a></p>
+                    <p class="mb-30">{{slicestr .Summary 0 50 | markdownify }}<a href="{{ .Permalink }}">[...]</a></p>
                     {{ end }}
                     <a class="pull-right text-gray font-13" href="{{ .Permalink }}"><i class="fa fa-angle-double-right text-theme-colored"></i> Read more</a>
                   </div>
