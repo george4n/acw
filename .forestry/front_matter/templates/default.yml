@@ -30,4 +30,6 @@ fields:
     maxSize: '8'
   default: "/uploads/2018/02/07/calltoaction.jpg"
 pages:
+- content/blog/Test-2.md
+- content/blog/Test-1.md
 - content/blog/sds.md
