@@ -1,9 +1,7 @@
 ---
-pages:
-- blog/george-test-two.md
-- blog/george-test-one.md
-- blog/test-1.md
+label: default
 hide_body: false
+is_partial: false
 fields:
 - name: title
   label: Title
