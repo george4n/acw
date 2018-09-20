@@ -8,4 +8,4 @@ type: "page"
 slug: "blog"
 ---
 
-This is the blog content.
+This is the blog content. This is another test to see if the text is echoing correctly.

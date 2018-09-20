@@ -14,7 +14,7 @@ It can be a daunting thought and quite frankly possibly a scary one for some cou
 
 #### Your Amazing Cyprus Wedding Planner
 
-Having previously worked as a wedding planner for a major tour operator in Paphos for many years our head wedding planner Mandy was able to bring along with her a wealth of experience, knowledge and organisational skills when joining Amazing Cyprus Weddings in 2008 accumulating 19yrs experience up to date so far!! Mandy feels fortunate to have a career she genuinely loves and feels excited about- stating “it’s a magical day that gives me great pleasure to be involved when I see it all come together and the emotion that comes with their day”. From the moment your wedding day is confirmed with Mandy she will be there on hand for you to personally answer any questions or queries you may have in record time and is only ever a phone call away.
+Having previously worked as a wedding planner for a major tour operator in Paphos for many years our head wedding planner Mandy was able to bring along with her a wealth of experience, knowledge and organisational skills when joining Amazing Cyprus Weddings in 2008 accumulating 19years experience up to date so far! Mandy feels fortunate to have a career she genuinely loves and feels excited about- stating “it’s a magical day that gives me great pleasure to be involved when I see it all come together and the emotion that comes with their day”. From the moment your wedding day is confirmed with Mandy she will be there on hand for you to personally answer any questions or queries you may have in record time and is only ever a phone call away.
 
 #### The Personal Touch From Amazing Cyprus Weddings!
 
@@ -22,4 +22,4 @@ The personal touch means not having to deal with a change of wedding planners al
 
 #### Do you have any questions?
 
-We would love to hear from you, we are only a click away………..
+We would love to hear from you, we are only a click away!
