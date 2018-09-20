@@ -29,3 +29,5 @@ fields:
   config:
     maxSize: '8'
   default: "/uploads/2018/02/07/calltoaction.jpg"
+pages:
+- content/blog/sds.md
